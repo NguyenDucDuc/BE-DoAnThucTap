@@ -11,7 +11,6 @@ import { AdminGuard } from 'src/guards/admin.guard';
 export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
-  @UseGuards(AuthGuard)
   @Get('/')
   async getAll(@Query() query: any ,@Res() res: Response){
     return res.status(200).send({
