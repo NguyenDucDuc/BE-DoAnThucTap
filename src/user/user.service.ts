@@ -20,7 +20,7 @@ export class UserService {
             username: body.username,
             password: hashed,
             role: "USER",
-            avatar: body.avatar
+            avatar: body.avatar || 'https://res.cloudinary.com/dlyeizufn/image/upload/v1683722598/havrsttbjgjiv99sdzid.jpg'
         })
         
         await this.userRepository.save(user)

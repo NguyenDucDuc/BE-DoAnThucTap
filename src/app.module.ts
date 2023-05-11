@@ -32,6 +32,7 @@ import { CommentEntity } from './comment/entities/comment.entity';
       entities: [UserEntity, ProductEntity, OrderEntity, OrderDetailEntity, CategoryEntity, CartEntity, ProductCartEntity, CommentEntity],
       synchronize: true,
     }),
+    TypeOrmModule.forFeature([CategoryEntity, ProductEntity, UserEntity]),
     UserModule,
     CategoryModule, 
     ProductModule,  
